@@ -151,6 +151,7 @@ img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #0078D7;
 }
 
 .grid .card h2 {
