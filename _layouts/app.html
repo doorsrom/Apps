@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header class="one">
+      <a href="/" class="logo"></a>
+    </header>
+    <header class="two">
+      <a href="https://github.com/doorsrom" class="two">Visit us on&nbsp;GitHub</a>
+    </header>
+    <article>
+      <img src="https://raw.githubusercontent.com/{{ page.repository }}/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
+      <h2>{{ page.title }}</h2>
+      <p>{{ page.description }}</p>
+{{ content }}
+      <form action="https://github.com/{{ page.repository }}/releases"><input type="submit" value="Download"/></form>
+    </article>
+    <footer>
+      <text class="header">Copyright 2018 Doors</text>
+    </footer>
+  </body>
+  </html>

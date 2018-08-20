@@ -1,2 +1,5 @@
-sass:
-  style: compressed
+defaults:
+  - scope:
+      path: "apps"
+    values:
+      layout: "app"
