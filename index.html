@@ -1,5 +1,5 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
+ignore: yes
 ---
 <!doctype html>
 <html>
@@ -15,12 +15,13 @@
         <h1>Welcome to the Doors Store</h1>
         <p>Here you will find the latest and greatest apps from our developers</p>
       </li>
-      {% for file in site.pages %}<li class="card">
-        <a href="{{ site.baseurl }}{{ file.path }}">
+      {% for file in site.pages %}{% if file.ignore != "yes" or file.path == "assets/css/style.scss" %}<li class="card">
+        <a href="{{ site.baseurl }}/{{ file.path }}">
           <h2>{{ file.title }}</h2>
-          <img src="https://raw.githubusercontent.com/{{ file.repository }}/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
+          <img src="https://raw.githubusercontent.com/{{ file.repository }}/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png">
         </a>
-      </li>{% endfor %}
+      </li>
+{% endif %}{% endfor %}
     </ul>
   </body>
 </html>
